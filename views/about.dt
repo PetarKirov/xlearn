@@ -5,9 +5,9 @@ html
 	head
 		title За Нас
 		- css("header");
-		- web_componenet("mat-toolbar");
+		- web_componenet("polymer");
 	body
-		mat-toolbar
+		site-banner
 			div XLearn
 		#main
 			h1 За Нас

@@ -23,3 +23,6 @@ bin/
 .dub/
 dub.selections.json
 dub.userprefs
+
+# Web components
+public/bower_components

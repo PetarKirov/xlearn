@@ -16,16 +16,22 @@
 
 	"configurations": [
 		{
+			"name": "win64",
+			"platforms": ["windows"],
+			"architecture": ["x86_64"],
+			"targetPath": "bin/Win64"
+		},
+		{
 			"name": "win32",
 			"platforms": ["windows"],
 			"architecture": ["x86"],
 			"targetPath": "bin/Win32"
 		},
 		{
-			"name": "win64",
-			"platforms": ["windows"],
+			"name": "linux64",
+			"platforms": ["linux"],
 			"architecture": ["x86_64"],
-			"targetPath": "bin/Win64"
+			"targetPath": "bin/Linux64"
 		},
 		{
 			"name": "linux32",
@@ -33,11 +39,5 @@
 			"architecture": ["x86"],
 			"targetPath": "bin/Linux32"
 		},
-		{
-			"name": "linux64",
-			"platforms": ["linux"],
-			"architecture": ["x86_64"],
-			"targetPath": "bin/Linux64"
-		}		
 	]
 }
