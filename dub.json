@@ -1,0 +1,43 @@
+{
+	"name": "xlearn",
+	"description": "A simple vibe.d server application.",
+	"copyright": "Copyright © 2015, zombinedev",
+	"authors": ["ZombineDev"],
+
+	"targetPath": "bin/",
+
+	"targetType": "executable",
+
+	"dependencies": {
+		"vibe-d": "~>0.7.23"
+	},
+
+	"versions": ["VibeDefaultMain"],
+
+	"configurations": [
+		{
+			"name": "win32",
+			"platforms": ["windows"],
+			"architecture": ["x86"],
+			"targetPath": "bin/Win32"
+		},
+		{
+			"name": "win64",
+			"platforms": ["windows"],
+			"architecture": ["x86_64"],
+			"targetPath": "bin/Win64"
+		},
+		{
+			"name": "linux32",
+			"platforms": ["linux"],
+			"architecture": ["x86"],
+			"targetPath": "bin/Linux32"
+		},
+		{
+			"name": "linux64",
+			"platforms": ["linux"],
+			"architecture": ["x86_64"],
+			"targetPath": "bin/Linux64"
+		}		
+	]
+}

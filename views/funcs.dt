@@ -1,0 +1,5 @@
+﻿- void css(string file)
+	link(rel= 'stylesheet', type='text/css', href='styles/#{file}.css')
+
+-void web_componenet(string file)
+	link(rel= 'import', href='bower_components/#{ file }/#{ file }.html')

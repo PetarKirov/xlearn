@@ -1,0 +1,14 @@
+doctype html
+html
+	include funcs
+
+	head
+		title За Нас
+		- css("header");
+		- web_componenet("mat-toolbar");
+	body
+		mat-toolbar
+			div XLearn
+		#main
+			h1 За Нас
+			p Ние сме много готини
