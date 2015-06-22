@@ -26,3 +26,7 @@ dub.userprefs
 
 # Web components
 public/bower_components
+
+# npm
+public/node_modules
+

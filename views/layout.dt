@@ -9,22 +9,17 @@ html
 		- bower_script("webcomponentsjs", "webcomponents-lite.min.js");
 
 		- bower_import("polymer");
-		- bower_import("paper-styles");
 		- bower_import("iron-flex-layout");
-		//- bower_import("paper-drawer-panel");
-		//- bower_import("paper-header-panel");
-		//- bower_import("paper-toolbar");
-		//- bower_import("paper-menu");
-		//- bower_import("paper-item");
-
-
+		- bower_import("iron-icons");
+		- bower_import("iron-image");
+		- bower_import("paper-styles");
 		- bower_import("paper-header-panel");
 		- bower_import("paper-toolbar");
 		- bower_import("paper-material");
 		- bower_import("paper-button");
 		- bower_import("paper-icon-button");
-		- bower_import("iron-icons");
-		- bower_import("iron-image");
+
+		- node_script("marked", "marked.min.js");
 
 		- bower_import("syntax-highlight");
 

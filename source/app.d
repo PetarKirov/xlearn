@@ -47,12 +47,20 @@ void enter_page_with_auth(string page_name, alias auth)
 
 void lesson(alias auth)(HTTPServerRequest req, HTTPServerResponse res)
 {
-	auto course_id = req.params["course_id"];
-	auto lesson_id = req.params["lesson_id"];
+	import std.file : read;
+	import std.format : format;
+	import std.conv : to;
+
+	auto course_id = req.params["course_id"].to!int;
+	auto lesson_id = req.params["lesson_id"].to!int;
+
+	auto lesson_file = format("./public/courses/course_%s/lesson_%s/lesson.md",
+		course_id, lesson_id);
+	auto lesson_text = read(lesson_file);
 
 	const string page_file_name = "lesson";
 	res.render!(page_file_name ~ ".dt", req, auth,
-		page_file_name, course_id, lesson_id);
+		page_file_name, course_id, lesson_id, lesson_text);
 }
 
 void error(alias auth)

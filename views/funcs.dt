@@ -6,8 +6,14 @@
 - void bower_script(string folder, string file)
 	script(src='/bower_components/#{ folder }/#{ file }')
 
+- void bower_css(string folder, string file)
+	script(src='/bower_components/#{ folder }/#{ file }.css')
+
 -void bower_import(string file)
 	link(rel= 'import', href='/bower_components/#{ file }/#{ file }.html')
+
+- void node_script(string folder, string file)
+	script(src='/node_modules/#{ folder }/#{ file }')
 
 - bool is_loged_in()
 	- return auth.getAuthInfo(req).authenticated;

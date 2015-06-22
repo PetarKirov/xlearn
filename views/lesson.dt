@@ -4,23 +4,34 @@ block title
 	- auto page_name = "Lesson";
 
 block body
+	script
+		window.onload = function() {
+
+			var text = "#{lesson_text}";
+
+			var lesson_area = document.getElementById("lesson-area");
+
+			lesson_area.innerHTML = marked(text);
+		};
+
+
 	h1 Welcome to lesson #{lesson_id} of course #{course_id}!
 
-	.lesson-area
-		p This is lesson begins with...
-
-		syntax-highlight(lang="D", theme="tomorrow-night-eighties")
-			|import std.stdio;
-			|
-			|void main()
-			|{
-			|    writeln("Hello, World!");
-			|}
-
-		- foreach (_; 0 .. 20)
-			p Fill
-
-		p This lesson ends with...
+	#lesson-area
+		//p This is lesson begins with...
+		//
+		//syntax-highlight(lang="D", theme="tomorrow-night-eighties")
+		//	|import std.stdio;
+		//	|
+		//	|void main()
+		//	|{
+		//	|    writeln("Hello, World!");
+		//	|}
+		//
+		//- foreach (_; 0 .. 20)
+		//	p Fill
+		//
+		//p This lesson ends with...
 
 	footer
 		paper-button.prev

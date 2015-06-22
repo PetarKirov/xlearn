@@ -1,0 +1,14 @@
+{
+  "name": "xlearn",
+  "version": "0.0.0",
+  "description": "Educational site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ZombineDev",
+  "license": "MIT",
+  "dependencies": {
+    "marked": "^0.3.3"
+  }
+}
