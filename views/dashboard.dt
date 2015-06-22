@@ -1,0 +1,14 @@
+extends layout
+
+block title
+	- auto page_name = "Home";
+
+block body
+	h1 These are the lessons you have learned so far:
+		ul
+			li Hodor Hodor is Hodor, but Hodor Hodor Hodor is not Hodor.
+			li Hodor Hodor Hodor Hodor Hodoooooor!!!
+			li Hodor!!!
+			li Hodor?
+			li Hodor Hodor.
+			li Hodor.

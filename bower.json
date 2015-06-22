@@ -1,0 +1,23 @@
+{
+  "name": "xlearn",
+  "version": "0.0.1",
+  "homepage": "https://github.com/ZombineDev/xlearn",
+  "authors": [
+    "ZombineDev <petar.p.kirov@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "paper-elements": "PolymerElements/paper-elements#^1.0.0",
+    "google-map": "GoogleWebComponents/google-map#^1.0.0",
+    "github-markdown-css": "~2.0.9",
+    "iron-image": "PolymerElements/iron-image#^1.0.0"
+  }
+}

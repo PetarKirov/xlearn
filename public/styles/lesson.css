@@ -1,0 +1,15 @@
+﻿syntax-highlight::shadow pre {
+	border-radius: 8px;
+}
+
+footer > paper-button.next {
+	float: left;
+}
+
+footer > paper-button.next {
+	float: right;
+}
+
+.lesson-area {
+	margin: 1%;
+}

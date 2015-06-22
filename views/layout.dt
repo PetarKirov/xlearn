@@ -1,0 +1,88 @@
+﻿doctype html
+html
+	include funcs
+
+	head
+		meta(name="theme-color", content="#659CEF")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+
+		- bower_script("webcomponentsjs", "webcomponents-lite.min.js");
+
+		- bower_import("polymer");
+		- bower_import("paper-styles");
+		- bower_import("iron-flex-layout");
+		//- bower_import("paper-drawer-panel");
+		//- bower_import("paper-header-panel");
+		//- bower_import("paper-toolbar");
+		//- bower_import("paper-menu");
+		//- bower_import("paper-item");
+
+
+		- bower_import("paper-header-panel");
+		- bower_import("paper-toolbar");
+		- bower_import("paper-material");
+		- bower_import("paper-button");
+		- bower_import("paper-icon-button");
+		- bower_import("iron-icons");
+		- bower_import("iron-image");
+
+		- bower_import("syntax-highlight");
+
+		- bower_import("google-map");
+
+		- css("layout");
+		- css(page_file_name);
+
+		- login_info_mixin();
+
+		block title
+		title #{page_name} | #{site_name}
+	body
+		paper-header-panel.flex(mode="waterfall")
+			paper-toolbar
+				h1.flex xLearn
+
+				- if (is_loged_in())
+					paper-button.userauth-login(raised="true", active="", onClick="navigator.id.logout(); return false")
+						span Log out
+				- else
+					paper-button.userauth-login(raised="true", active="", onClick="navigator.id.request(); return false")
+						span Log in
+
+			paper-material.main-site-content(elevation="4")
+				block body
+
+		
+
+
+
+		//.header
+		//	img(src="/images/sign_up.png", width="64px", height="64px")
+		//	span.name Name
+
+		//paper-scroll-header-panel.flex
+		//	paper-toolbar
+		//		Hello World!
+
+		//paper-drawer-panel(id='drawerPanel', responsive-width='1024px')
+		//	paper-header-panel.list-panel(drawer="", mode='seamed')
+		//		paper-toolbar
+		//		paper-menu(class="list")
+		//			- foreach (_; 0 .. 10)
+		//				paper-item
+		//
+		//	paper-header-panel(class="main-panel", main="", mode="cover")
+		//		h1
+		//			.title #{site_name}
+		//
+		//			- if (is_loged_in(auth))
+		//				.login-status You're logged in.
+		//			- else
+		//				block login
+		//
+		//		paper-toolbar(class="")
+		//			paper-icon-button(icon="menu", paper-drawer-toggle="")
+		//
+		//		.content
+		//			paper-material
+		//				block body

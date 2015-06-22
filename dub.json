@@ -9,7 +9,8 @@
 	"targetType": "executable",
 
 	"dependencies": {
-		"vibe-d": "~>0.7.23"
+		"vibe-d": "~>0.7.23",
+		"user-auth": "~master"
 	},
 
 	"versions": ["VibeDefaultMain"],

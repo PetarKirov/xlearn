@@ -1,0 +1,8 @@
+﻿extends layout
+
+block title
+	- auto page_name = "Error";
+
+block body
+	p Oops. Something wrong has happended
+	p Error: #{error.message}

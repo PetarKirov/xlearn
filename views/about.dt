@@ -1,14 +1,7 @@
-doctype html
-html
-	include funcs
+extends layout
 
-	head
-		title За Нас
-		- css("header");
-		- web_componenet("polymer");
-	body
-		site-banner
-			div XLearn
-		#main
-			h1 За Нас
-			p Ние сме много готини
+block title
+	- auto page_name = "About";
+
+block body
+	h1 Yeahhhhhh!!!!

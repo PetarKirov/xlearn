@@ -1,0 +1,7 @@
+﻿extends layout
+
+block title
+	- auto page_name = "Profile";
+
+block body
+	h1 Viewing information for user #{user_name}.

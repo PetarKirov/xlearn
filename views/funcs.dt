@@ -1,5 +1,39 @@
-﻿- void css(string file)
-	link(rel= 'stylesheet', type='text/css', href='styles/#{file}.css')
+﻿- auto site_name = "xLearn";
 
--void web_componenet(string file)
-	link(rel= 'import', href='bower_components/#{ file }/#{ file }.html')
+- void css(string file)
+	link(rel= 'stylesheet', type='text/css', href='/styles/#{file}.css')
+
+- void bower_script(string folder, string file)
+	script(src='/bower_components/#{ folder }/#{ file }')
+
+-void bower_import(string file)
+	link(rel= 'import', href='/bower_components/#{ file }/#{ file }.html')
+
+- bool is_loged_in()
+	- return auth.getAuthInfo(req).authenticated;
+
+- void login_info_mixin()
+	script(src="http://code.jquery.com/jquery-1.8.2.min.js")
+	script(src="https://login.persona.org/include.js")
+
+	script(type="application/javascript").
+		navigator.id.watch({
+			loggedInUser: #{auth.getAuthInfo(req).email.length ? '\"'~auth.getAuthInfo(req).email~'\"' : "null"},
+			onlogin: function(assertion) {
+				$.ajax({ /* <-- This example uses jQuery, but you can use whatever you'd like */
+					type: 'POST',
+					url: '/persona-login', // This is a URL on your website.
+					data: {assertion: assertion},
+					success: function(res, status, xhr) { window.location.reload(); },
+					error: function(xhr, status, err) { alert("login failure" + err); }
+				});
+			},
+			onlogout: function() {
+				$.ajax({
+					type: 'POST',
+					url: '/persona-logout', // This is a URL on your website.
+					success: function(res, status, xhr) { window.location.reload(); },
+					error: function(xhr, status, err) { alert("logout failure" + err); }
+				});
+			}
+		});

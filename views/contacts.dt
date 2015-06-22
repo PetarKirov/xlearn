@@ -1,0 +1,8 @@
+﻿extends layout
+
+block title
+	- auto page_name = "Contacts";
+
+block body
+	google-map(latitude="42.6439679", longitude="23.3389247", zoom="15", fit-to-markers="")
+		google-map-marker(latitude="42.6439679", longitude="23.3389247", title="xLearn")

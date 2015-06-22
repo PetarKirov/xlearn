@@ -1,0 +1,15 @@
+﻿extends layout
+
+block title
+	- auto page_name = "Images";
+
+block body
+	h2 Please sit back and relax.
+	h2 We've prepared to waste your time with
+	h2 some images depicting our history:
+
+	.horizontal.layout.wrap
+		- import std.file, std.path;
+		- foreach (string name; dirEntries("./public/images", SpanMode.depth))
+			- if (isFile(name))
+				iron-image(sizing="contain", src='#{relativePath(name.absolutePath, "./public/".absolutePath)}')

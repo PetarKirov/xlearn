@@ -1,0 +1,14 @@
+extends layout
+
+block title
+	- auto page_name = "Login";	
+
+block body
+	:css
+		.userauth-login {
+			background-color: #eee;
+			border: 1px solid #ddd;
+			padding: 1em;
+			margin: 1em;
+		}
+	!= auth.generateAuthMixinList(req)
